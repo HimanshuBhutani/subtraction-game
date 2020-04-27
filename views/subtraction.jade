@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  4 options are minuend, subtrahend, answer, options respectively
+  - if (err)
+    p= err
+  - else
+    for question in questions
+      ul
+        li= question.minuend
+        li= question.subtrahend
+        li= question.answer
+        li= question.options
+      
